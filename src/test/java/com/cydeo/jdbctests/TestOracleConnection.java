@@ -24,9 +24,11 @@ public class TestOracleConnection {
 //        System.out.println(resultSet.getInt("REGION_ID")+" - "+resultSet.getString("REGION_NAME"));
 
 
-        while (resultSet.next()){
-            System.out.println(resultSet.getInt("REGION_ID")+" - "+resultSet.getString("REGION_NAME"));
+        while (resultSet.next()) {
+            System.out.println(resultSet.getInt("REGION_ID") + " - " + resultSet.getString("REGION_NAME"));
         }
-
+        resultSet.close();
+        statement.close();
+        connection.close();
     }
 }
